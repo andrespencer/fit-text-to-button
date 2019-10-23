@@ -1,0 +1,14 @@
+.InputText {
+	padding: 2em;
+}
+
+.InputText__label {
+	display: block;
+}
+
+.InputText__input{
+	width: 25em;
+  max-width: 40vw;
+  margin: 2em;
+  height: 2em;
+} 

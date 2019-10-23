@@ -1,0 +1,27 @@
+.InputRange {
+	padding: 2em;
+}
+
+.InputRange__label {
+	display: block;
+}
+
+.InputRange__input {
+	width: 20em;
+  max-width: 35vw;
+  margin: 2em;
+  height: 2em;
+} 
+
+.InputRange__input:hover {
+	cursor: grab;
+}
+
+.InputRange__input:active {
+	cursor: grabbing;
+}
+
+.InputRange__label-value {
+	font-size: 70%;
+	vertical-align: text-top;
+}

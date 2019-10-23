@@ -1,0 +1,21 @@
+.OutputView--hidden {
+	display: none;
+}
+
+.OutputView__box {
+	width: 375px;
+	border: 1px solid white;
+	height: 50px;
+	line-height: 50px;
+	font-size: 45px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all .3s;
+}
+
+.OutputView__box-text {
+	display: inline-block;
+  white-space: pre;
+  padding: 0 10px;
+}
