@@ -24,7 +24,7 @@ class OutputView extends PureComponent {
 
   render () {
     return (
-      <div className={"OutputView" + (!this.props.visible && " OutputView--hidden")}>
+      <div className={"OutputView" + (this.props.visible ? "" : " OutputView--hidden")}>
         <div className="OutputView__box" style={this.state.boxStyle}>
           <span id="OutputView__box-text" className="OutputView__box-text">
             {this.props.text}
