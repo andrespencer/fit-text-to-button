@@ -9,8 +9,7 @@ class App extends PureComponent {
   constructor (props) {
     super(props)
 
-    this.handleSliderChange = this.handleSliderChange.bind(this);
-    this.handleTextChange = this.handleTextChange.bind(this);
+    this.handleInputChange = this.handleInputChange.bind(this);
     this.fitText = this.fitText.bind(this);
     this.changeFontSize = this.changeFontSize.bind(this);
 
@@ -50,18 +49,11 @@ class App extends PureComponent {
     localStorage.setItem('state', JSON.stringify(this.state))
   }
 
-  handleTextChange (value) {
-    this.setState({
-        textValue: value
-      },
-      () => {this.fitText()}
-    )
-  }
-
-  handleSliderChange (value) {
-    this.setState({
-      sliderValue: value
-    },
+  handleInputChange (type, value) {
+    let stateObj = {}
+    stateObj[type] = value
+    this.setState(
+      stateObj,
       () => {this.fitText()}
     )
   }
@@ -104,12 +96,12 @@ class App extends PureComponent {
         <section className="App__Controls">
           <InputText
             value={this.state.textValue}
-            onChange={this.handleTextChange}
+            onChange={this.handleInputChange}
             label={translations.inputTextLabel}
           />
           <InputRange
             value={this.state.sliderValue}
-            onChange={this.handleSliderChange}
+            onChange={this.handleInputChange}
             label={translations.inputRangeLabel}
           />
         </section>

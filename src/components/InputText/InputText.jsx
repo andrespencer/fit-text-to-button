@@ -9,7 +9,7 @@ class InputText extends PureComponent {
   }
 
   handleChange () {
-    this.props.onChange(this.input.value)
+    this.props.onChange('textValue', this.input.value)
   }
 
   render () {

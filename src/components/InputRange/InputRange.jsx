@@ -9,7 +9,7 @@ class InputRange extends PureComponent {
   }
 
   handleChange () {
-    this.props.onChange(this.input.value)
+    this.props.onChange('sliderValue', this.input.value)
   }
 
   render () {
