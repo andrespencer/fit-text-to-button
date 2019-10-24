@@ -101,7 +101,7 @@ class App extends PureComponent {
   render () {
     return (
       <div className="App">
-        <div className="App__Controls">
+        <section className="App__Controls">
           <InputText
             value={this.state.textValue}
             onChange={this.handleTextChange}
@@ -112,8 +112,8 @@ class App extends PureComponent {
             onChange={this.handleSliderChange}
             label={translations.inputRangeLabel}
           />
-        </div>
-        <div className="App__Output">
+        </section>
+        <main className="App__Output">
           <OutputView
             text={this.state.textValue}
             width={this.state.sliderValue}
@@ -125,7 +125,7 @@ class App extends PureComponent {
               <h2>{translations.errorMessage}</h2>
             </div>
           )}
-        </div>
+        </main>
       </div>
     )
   }
