@@ -1,7 +1,8 @@
 ## Overview
 
 "Fit text to button" is a React-based solution to make a variable length text fit inside a container with
-flexible width but fixed height. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+flexible width but fixed height. The app will always try to have the largest font size possible.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ![Overview of the app](https://i.ibb.co/dpQwHFh/fittexttobutton.png)
 
@@ -16,6 +17,7 @@ flexible width but fixed height. This project was bootstrapped with [Create Reac
 ## Suggestions of improvement
 
 - Find the average width of a character and prevent the box from being resized to a smaller width than averageCharacterWidth * textValue.length
+- Upon a change in the text or width of the output box, use the average character width to guess a probable maximum font-size and then fine tune from that value.
 
 ## Available Scripts
 
